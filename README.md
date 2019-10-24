@@ -1,5 +1,6 @@
 # test-mbedtls-dependency error
 
+```
 :~/Repos/test-mbedtls-dependency$ cargo build --target=x86_64-fortanix-unknown-sgx  
    Compiling yasna v0.2.2  
    Compiling rs-libc v0.1.0  
@@ -13,20 +14,21 @@ error[E0432]: unresolved import `super::libc::FILE`
   --> /home/enarxnuc/.cargo/git/checkouts/rust-mbedtls-9749fa8112dd1a19/8cd4a57/mbedtls-sys/src/types.rs:91:13  
    |  
 91 |     pub use super::libc::FILE;  
-   |             ^^^^^^^^^^^^^^^^^ no `FILE` in the root  
+   |             ^^^^^^^^^^^^^^^^^ no 'FILE' in the root  
 
-error[E0432]: unresolved imports `super::libc::time_t`, `super::libc::tm`  
+error[E0432]: unresolved imports 'super::libc::time_t', 'super::libc::tm'  
   --> /home/enarxnuc/.cargo/git/checkouts/rust-mbedtls-9749fa8112dd1a19/8cd4a57/mbedtls-sys/src/types.rs:94:27  
    |  
 94 |     pub use super::libc::{time_t, tm};  
-   |                           ^^^^^^  ^^ no `tm` in the root  
+   |                           ^^^^^^  ^^ no 'tm' in the root  
    |                           |  
-   |                           no `time_t` in the root  
-   |                           help: a similar name exists in the module: `size_t`  
+   |                           no 'time_t' in the root  
+   |                           help: a similar name exists in the module: 'size_t'  
 
 error: aborting due to 2 previous errors  
 
-For more information about this error, try `rustc --explain E0432`.  
-error: could not compile `mbedtls-sys-auto`.  
+For more information about this error, try 'rustc --explain E0432'.  
+error: could not compile 'mbedtls-sys-auto'.  
 
 To learn more, run the command again with --verbose.  
+```
